@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda Fácil</title>
+  <link rel="icon" type="image/png" href="./Img/Icon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <div class="max-w-4xl mx-auto p-6">
+    <div class="flex justify-center mb-6">
+      <img src="./Img/Logo.png" alt="Agenda Fácil" class="w-64 md:w-80 lg:w-96 mx-auto object-contain">
+    </div>
+
+    <div class="bg-white p-4 rounded-2xl shadow mb-6">
+      <h2 class="text-xl font-semibold mb-4">Novo Agendamento</h2>
+      <form id="form" class="flex flex-col items-center">
+        <input class="border p-2 w-full mb-2" type="text" id="cliente" placeholder="Nome do cliente" required>
+        <input class="border p-2 w-full mb-2" type="text" id="servico" placeholder="Serviço" required>
+        <input class="border p-2 w-full mb-2" type="date" id="data" required>
+        <input class="border p-2 w-full mb-2" type="time" id="hora" required>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded-xl">Agendar</button>
+      </form>
+    </div>
+
+    <div class="bg-white p-4 rounded-2xl shadow">
+      <h2 class="text-xl font-semibold mb-4">Agendamentos</h2>
+      <ul id="lista"></ul>
+    </div>
+  </div>
+
+  <script src="./JS/script.js"></script>
+</body>
+</html>
