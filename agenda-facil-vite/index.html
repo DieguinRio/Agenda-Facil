@@ -44,24 +44,26 @@
       </div>
     </div>
     <div class="login-right">
-      <div class="login-tagline">Bem-vindo de volta</div>
-      <h2 class="login-title">Acesse sua conta</h2>
-      <p class="login-sub">Gerencie seus agendamentos com facilidade</p>
-      <div class="login-form">
-        <div class="form-group"><label>E-mail</label><input type="email" id="login-email" value="demo@agendafacil.app" /></div>
-        <div class="form-group"><label>Senha</label><input type="password" id="login-pass" value="demo1234" /></div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:6px;font-size:12.5px">
-          <label style="display:flex;align-items:center;gap:6px;font-weight:500;cursor:pointer"><input type="checkbox" checked style="width:14px;height:14px;accent-color:var(--primary)"/> Lembrar de mim</label>
-          <a href="#" style="color:var(--primary);font-weight:600;text-decoration:none">Esqueci a senha</a>
+      <div class="login-form-inner">
+        <div class="login-tagline">Bem-vindo de volta</div>
+        <h2 class="login-title">Acesse sua conta</h2>
+        <p class="login-sub">Gerencie seus agendamentos com facilidade</p>
+        <div class="login-form">
+          <div class="form-group"><label>E-mail</label><input type="email" id="login-email" value="demo@agendafacil.app" /></div>
+          <div class="form-group"><label>Senha</label><input type="password" id="login-pass" value="demo1234" /></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:6px;font-size:12.5px">
+            <label style="display:flex;align-items:center;gap:6px;font-weight:500;cursor:pointer"><input type="checkbox" checked style="width:14px;height:14px;accent-color:var(--primary)"/> Lembrar de mim</label>
+            <a href="#" style="color:var(--primary);font-weight:600;text-decoration:none">Esqueci a senha</a>
+          </div>
+          <button class="btn btn-primary" id="login-btn" style="width:100%;margin-top:20px;height:46px;font-size:15px;border-radius:10px">Entrar</button>
+          <div class="login-divider">ou</div>
+          <button class="login-demo-btn" id="login-demo-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Entrar com conta demo
+          </button>
         </div>
-        <button class="btn btn-primary" id="login-btn" style="width:100%;margin-top:20px;height:46px;font-size:15px;border-radius:10px">Entrar</button>
-        <div class="login-divider">ou</div>
-        <button class="login-demo-btn" id="login-demo-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          Entrar com conta demo
-        </button>
+        <div class="login-footer">Não tem conta? <a href="#">Criar gratuitamente</a> · <a href="#">Termos</a> · <a href="#">Privacidade</a></div>
       </div>
-      <div class="login-footer">Não tem conta? <a href="#">Criar gratuitamente</a> · <a href="#">Termos</a> · <a href="#">Privacidade</a></div>
     </div>
   </div>
 
@@ -108,7 +110,7 @@
       <a class="soc-icon" href="#" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
       <a class="soc-icon" href="#" title="Twitter/X"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M4 20L20 4"/></svg></a>
       <span style="flex:1"></span>
-      <span style="font-size:10.5px;color:var(--muted-fg)">© 2026</span>
+      <span class="sidebar-copyright">© 2026</span>
     </div>
   </aside>
 
