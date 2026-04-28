@@ -83,6 +83,7 @@
   background: #1a1f35;
   border-right: none;
   display: flex; flex-direction: column; z-index: 200;
+  height: 100vh;
   transition: transform .25s cubic-bezier(.4,0,.2,1);
 }
 
@@ -176,7 +177,7 @@ nav a svg { width: 18px; height: 18px; flex-shrink: 0; }
 .sidebar-copyright { font-size: 10.5px; color: rgba(255,255,255,.25); }
 
 /* ── MAIN ────────────────────────────────────── */
-#main { flex: 1; margin-left: var(--sidebar); display: flex; flex-direction: column; min-height: 100vh; }
+#main { flex: 1; margin-left: var(--sidebar); display: flex; flex-direction: column; min-height: 100vh; background: var(--bg); }
 #content { flex: 1; padding: 28px 32px; max-width: 1160px; width: 100%; margin: 0 auto; }
 
 /* ── PUBLIC OVERLAY ──────────────────────────── */

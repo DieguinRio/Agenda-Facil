@@ -12,11 +12,15 @@ export function renderSettings() {
   const slug = (s.bizName || 'meu-negocio').toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'')
 
   el.innerHTML = `
-    <div class="row-between mb24">
-      <div><h1 class="page-title">Meu Negócio</h1><p class="page-sub">Configure o perfil e o link público</p></div>
-      <button class="btn btn-primary" id="set-save-btn">Salvar</button>
-    </div>
     <div style="max-width:560px;display:flex;flex-direction:column;gap:16px">
+
+      <div class="row-between" style="padding-bottom:4px">
+        <div>
+          <h1 class="page-title">Meu Negócio</h1>
+          <p class="page-sub">Configure o perfil e o link público</p>
+        </div>
+        <button class="btn btn-primary" id="set-save-btn">Salvar</button>
+      </div>
 
       <div class="card">
         <div class="ftitle" style="margin-bottom:14px">
@@ -84,6 +88,7 @@ export function renderSettings() {
           }).join('')}
         </div>
       </div>
+
     </div>`
 
   document.getElementById('set-save-btn').addEventListener('click', save)
