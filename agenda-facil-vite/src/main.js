@@ -44,3 +44,22 @@ document.querySelector('[data-page="appointments"]')?.addEventListener('click', 
 // ── Mobile sidebar ────────────────────────────────────────────
 document.getElementById('burger')?.addEventListener('click', openSidebar)
 document.getElementById('sidebar-overlay')?.addEventListener('click', closeSidebar)
+
+// ── Logout ────────────────────────────────────────────────────
+document.getElementById('logout-btn')?.addEventListener('click', (e) => {
+  e.preventDefault()
+  if (!confirm('Deseja sair da sua conta?')) return
+  // Clear session but keep business data
+  localStorage.removeItem('af_seeded')
+  localStorage.removeItem('af_onboarded')
+  localStorage.removeItem('af_new_appts')
+  // Show login screen
+  const screen = document.getElementById('login-screen')
+  screen.classList.remove('hidden')
+  screen.style.opacity = '0'
+  requestAnimationFrame(() => {
+    screen.style.transition = 'opacity .3s ease'
+    screen.style.opacity = '1'
+  })
+  closeSidebar()
+})

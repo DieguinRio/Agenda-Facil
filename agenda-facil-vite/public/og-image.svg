@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#F7F8FC"/>
+  <rect width="1200" height="6" fill="#3D8FE8"/>
+  <image href="/logo.png" x="376" y="195" width="448" height="160" preserveAspectRatio="xMidYMid meet"/>
+  <text x="600" y="405" font-family="Arial,sans-serif" font-size="22" fill="#6B7280" text-anchor="middle" letter-spacing="1">Seu tempo organizado, seu negócio crescendo</text>
+  <rect y="580" width="1200" height="50" fill="#1a1f35"/>
+  <text x="600" y="611" font-family="Arial,sans-serif" font-size="17" fill="rgba(255,255,255,.55)" text-anchor="middle" letter-spacing="2">agendafacil.app</text>
+</svg>

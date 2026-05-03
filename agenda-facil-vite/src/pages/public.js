@@ -1,6 +1,7 @@
 import { DB, getAppts, getSvcs, getClients, saveAppts, saveClients, getSettings } from '../lib/db.js'
 import { toast, fmtDate, fmtMoney, todayStr, dateToStr, PT_MONTHS, PT_DAYS_S, DAY_KEYS, icon } from '../lib/helpers.js'
 import { updateSidebarStatus } from '../components/sidebar.js'
+import { incrementBadge } from '../lib/badge.js'
 
 let pubSvc = null, pubDay = null, pubTime = null, pubRescheduleId = null
 
@@ -255,6 +256,7 @@ function confirm() {
   appts.push({ id: DB.id(), client_id: client.id, client_name: name, client_phone: phone, service_id: pubSvc.id, service_name: pubSvc.name, date: pubDay, time: pubTime, price: pubSvc.price, notes, status: 'scheduled', created_date: todayStr(), source: pubRescheduleId ? 'rescheduled' : 'public_link' })
   saveAppts(appts)
   updateSidebarStatus()
+  incrementBadge()
 
   const detail = pubRescheduleId
     ? `${pubSvc.name} reagendado para ${fmtDate(pubDay)} às ${pubTime}. Até lá, ${name.split(' ')[0]}!`
