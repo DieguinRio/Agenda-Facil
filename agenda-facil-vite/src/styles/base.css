@@ -51,3 +51,166 @@ body {
 .toast.error   { background: var(--red); }
 .toast.warning { background: var(--amber); }
 @keyframes toast-in { from { opacity:0; transform:translateY(8px) } to { opacity:1; transform:none } }
+
+/* ══════════════════════════════════════════════
+   DARK MODE — cobre todos os elementos do app
+   ══════════════════════════════════════════════ */
+[data-theme="dark"] {
+  /* ── Core palette ── */
+  --bg:        #0d0f1a;
+  --card:      #161928;
+  --border:    #252840;
+  --muted:     #1c1f30;
+  --muted-fg:  #555e7a;
+  --fg:        #e2e6f3;
+  --fg2:       #8a93b0;
+  --shadow:    0 1px 4px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.2);
+  --shadow-md: 0 2px 8px rgba(0,0,0,.4), 0 8px 32px rgba(0,0,0,.3);
+
+  /* ── Accent tints (softer on dark bg) ── */
+  --pri-lt:  rgba(37,99,235,.15);
+  --grn-lt:  rgba(22,163,74,.15);
+  --amb-lt:  rgba(217,119,6,.15);
+  --red-lt:  rgba(220,38,38,.15);
+}
+
+/* ── Body & scrollbar ── */
+[data-theme="dark"] body        { background: var(--bg); color: var(--fg); }
+[data-theme="dark"] ::-webkit-scrollbar       { width: 6px; }
+[data-theme="dark"] ::-webkit-scrollbar-track { background: var(--bg); }
+[data-theme="dark"] ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+
+/* ── All cards / surfaces ── */
+[data-theme="dark"] .card,
+[data-theme="dark"] .appt-card,
+[data-theme="dark"] .svc-card,
+[data-theme="dark"] .client-card,
+[data-theme="dark"] .stat-card,
+[data-theme="dark"] .revenue-box,
+[data-theme="dark"] .empty,
+[data-theme="dark"] .modal { background: var(--card); border-color: var(--border); }
+
+/* ── Inputs, selects, textareas ── */
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background: var(--muted);
+  border-color: var(--border);
+  color: var(--fg);
+}
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder { color: var(--muted-fg); }
+[data-theme="dark"] input:focus,
+[data-theme="dark"] select:focus,
+[data-theme="dark"] textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37,99,235,.18);
+}
+[data-theme="dark"] option { background: var(--card); color: var(--fg); }
+
+/* ── Buttons ── */
+[data-theme="dark"] .btn-outline {
+  border-color: var(--border);
+  color: var(--fg2);
+}
+[data-theme="dark"] .btn-outline:hover { background: var(--muted); color: var(--fg); }
+[data-theme="dark"] .btn-ghost:hover   { background: var(--muted); color: var(--fg); }
+
+/* ── Dividers & borders ── */
+[data-theme="dark"] .divider      { border-color: var(--border); }
+[data-theme="dark"] .fsection     { border-color: var(--border); }
+[data-theme="dark"] .client-notes { border-color: var(--border); }
+[data-theme="dark"] .revenue-row  { border-color: var(--border); }
+
+/* ── Switch track (off state) ── */
+[data-theme="dark"] .switch-track { background: var(--border); }
+
+/* ── Modal overlay ── */
+[data-theme="dark"] .modal-overlay { background: rgba(0,5,20,.65); }
+
+/* ── Mobile header ── */
+[data-theme="dark"] #mob-header {
+  background: var(--card);
+  border-color: var(--border);
+}
+[data-theme="dark"] .mob-logo { color: var(--fg); }
+[data-theme="dark"] #burger   { color: var(--fg2); }
+
+/* ── Main content area ── */
+[data-theme="dark"] #main { background: var(--bg); }
+
+/* ── Calendar ── */
+[data-theme="dark"] .cal-grid      { background: var(--card); border-color: var(--border); }
+[data-theme="dark"] .cal-day-header{ background: var(--card); border-color: var(--border); }
+[data-theme="dark"] .cal-time-cell { border-color: var(--border); }
+[data-theme="dark"] .cal-slot      { border-color: var(--border); }
+[data-theme="dark"] .cal-slot:hover{ background: rgba(37,99,235,.10); }
+[data-theme="dark"] .cal-day-col   { border-color: var(--border); }
+[data-theme="dark"] .cal-time-col  { border-color: var(--border); }
+[data-theme="dark"] .cal-nav-btn {
+  background: var(--card);
+  border-color: var(--border);
+  color: var(--fg2);
+}
+[data-theme="dark"] .cal-nav-btn:hover { background: var(--muted); color: var(--fg); }
+
+/* ── Public page overlay ── */
+[data-theme="dark"] #public-overlay { background: var(--bg); }
+[data-theme="dark"] .svc-pick-item  { background: var(--card); border-color: var(--border); }
+[data-theme="dark"] .pub-slot       { background: var(--card); border-color: var(--border); color: var(--fg2); }
+[data-theme="dark"] .pub-form       { background: var(--card); border-color: var(--border); }
+[data-theme="dark"] .pub-confirm-box{ background: rgba(22,163,74,.08); }
+[data-theme="dark"] .pub-day        { background: var(--card); border-color: var(--border); }
+[data-theme="dark"] .pub-day .dom   { color: var(--fg); }
+[data-theme="dark"] .pub-day .dow   { color: var(--muted-fg); }
+
+/* ── Login screen (stays light — it's a brand surface) ── */
+[data-theme="dark"] #login-screen .login-right {
+  background: #111422;
+}
+[data-theme="dark"] #login-screen .login-right input {
+  background: #1c1f30;
+  border-color: #252840;
+  color: #e2e6f3;
+}
+[data-theme="dark"] .login-demo-btn {
+  background: #1c1f30;
+  border-color: #252840;
+  color: #8a93b0;
+}
+[data-theme="dark"] .login-demo-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(37,99,235,.10);
+}
+
+/* ── Onboarding ── */
+[data-theme="dark"] .ob-card        { background: var(--card); }
+[data-theme="dark"] .ob-prog-seg    { background: var(--border); }
+[data-theme="dark"] .ob-add-svc     { border-color: var(--border); }
+[data-theme="dark"] .ob-link-box    { background: rgba(37,99,235,.12); border-color: rgba(37,99,235,.25); }
+[data-theme="dark"] .ob-check-item  { color: var(--fg2); }
+[data-theme="dark"] .ob-dots .ob-dot{ background: var(--border); }
+
+/* ── Toasts stay vibrant ── */
+[data-theme="dark"] .toast { background: #1e2235; border: 1px solid var(--border); }
+[data-theme="dark"] .toast.success { background: #14532d; border-color: rgba(22,163,74,.3); }
+[data-theme="dark"] .toast.error   { background: #7f1d1d; border-color: rgba(220,38,38,.3); }
+[data-theme="dark"] .toast.warning { background: #78350f; border-color: rgba(217,119,6,.3); }
+
+/* ── 404 page ── */
+[data-theme="dark"] #page-404 { background: var(--bg); }
+
+/* ── Search wrap icon ── */
+[data-theme="dark"] .search-wrap svg { color: var(--muted-fg); }
+
+/* ── Smooth theme transition ── */
+*, *::before, *::after {
+  transition: background-color .2s ease, border-color .2s ease, color .15s ease;
+}
+/* but don't transition transforms/opacity (breaks animations) */
+.btn, .toast, .modal, .page, .cal-event, .ob-card {
+  transition: background-color .2s ease, border-color .2s ease,
+              color .15s ease, box-shadow .2s ease, opacity .18s ease,
+              transform .18s ease, filter .14s ease;
+}

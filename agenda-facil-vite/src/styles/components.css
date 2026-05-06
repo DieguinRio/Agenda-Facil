@@ -174,3 +174,38 @@ textarea { resize: vertical; }
 .revenue-row .val { font-weight: 700; color: var(--fg); }
 .revenue-row .val.green { color: var(--green); }
 .revenue-row .val.amber { color: var(--amber); }
+
+/* ── LOGIN SPINNER ───────────────────────────── */
+.btn-loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  width: 16px; height: 16px;
+  border: 2px solid rgba(255,255,255,.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: btn-spin .6s linear infinite;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes btn-spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+/* ── SAVED FEEDBACK ──────────────────────────── */
+.btn-saved {
+  background: var(--green) !important;
+  box-shadow: 0 2px 8px rgba(22,163,74,.3) !important;
+  pointer-events: none;
+}
+
+/* ── SMOOTH HOVER on all cards ───────────────── */
+.card, .appt-card, .svc-card, .client-card, .stat-card {
+  transition: box-shadow .2s ease, transform .15s ease, border-color .15s ease;
+}
+.card:hover, .appt-card:hover, .svc-card:hover,
+.client-card:hover, .stat-card:hover {
+  transform: translateY(-1px);
+}

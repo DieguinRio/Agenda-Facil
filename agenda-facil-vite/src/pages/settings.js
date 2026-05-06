@@ -122,6 +122,20 @@ function save() {
     twitter:   document.getElementById('set-twitter')?.value.trim(),
     hours,
   })
+
+  // ── "Salvo ✓" visual feedback on the button ──
+  const btn = document.getElementById('set-save-btn')
+  if (btn) {
+    const original = btn.textContent
+    btn.textContent = '✓ Salvo!'
+    btn.classList.add('btn-saved')
+    setTimeout(() => {
+      btn.textContent = original
+      btn.classList.remove('btn-saved')
+    }, 2000)
+  }
+
   toast('Configurações salvas!')
   updateSidebarProfile()
 }
+  updateSidebarProfile()
